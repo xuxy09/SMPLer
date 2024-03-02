@@ -68,9 +68,9 @@ Existing Transformers for monocular 3D human shape and pose estimation typically
     ```
 
 ## 2. How to Run
-- Download [meta data](https://xjtueducn-my.sharepoint.com/:u:/g/personal/xiangyu_xu_xjtu_edu_cn/ER5jWWesn0ZHjZQNWkixOZABifez3WFVlrcSQbv7vhduCQ?e=yCYrJW) and extract it into "path_to_smpler/meta_data"
+- Download [meta data](https://xjtueducn-my.sharepoint.com/:u:/g/personal/xiangyu_xu_xjtu_edu_cn/ER5jWWesn0ZHjZQNWkixOZABifez3WFVlrcSQbv7vhduCQ?e=yCYrJW) and extract it into "PATH_to_SMPLer/meta_data"
 
-- Download [pretrained models](https://xjtueducn-my.sharepoint.com/:u:/g/personal/xiangyu_xu_xjtu_edu_cn/EUpZDGdn585DjiQZ8Eg89nYBZRKnyjbint-9fYD0_ECz3Q?e=6NRgb5) and extract it into "path_to_smpler/pretrained"
+- Download [pretrained models](https://xjtueducn-my.sharepoint.com/:u:/g/personal/xiangyu_xu_xjtu_edu_cn/EUpZDGdn585DjiQZ8Eg89nYBZRKnyjbint-9fYD0_ECz3Q?e=6NRgb5) and extract it into "PATH_to_SMPLer/pretrained"
 
 - Run demo
     ```bash
@@ -86,22 +86,22 @@ There are two ways to download the datasets: azcopy and wget.
 
 - Download datasets with azcopy:
     ```bash
-    cd path_to_store_dataset
-    azcopy_path=path_to_azcopy
-    bash path_to_smpler/scripts/download_datasets_azcopy.sh
+    cd PATH_to_STORE_DATASET
+    azcopy_path=PATH_to_AZCOPY
+    bash PATH_to_SMPLer/scripts/download_datasets_azcopy.sh
     ```
 
 - Create a symbolic link:
     ```bash
-    cd path_to_smpler
-    ln -s path_to_store_dataset ./datasets
+    cd PATH_to_SMPLer
+    ln -s PATH_to_STORE_DATASET ./datasets
     ```
 
 Alternative way: wget (usually slower and less stable, but no dependency on azcopy)
 -  Download datasets with wget:
     ```bash
-    cd path_to_store_dataset
-    bash path_to_smpler/scripts/download_datasets_wget.sh
+    cd PATH_to_STORE_DATASET
+    bash PATH_to_SMPLer/scripts/download_datasets_wget.sh
     ```
 
 
@@ -144,10 +144,10 @@ Alternative way: wget (usually slower and less stable, but no dependency on azco
     # 1. Train CNN backbone on mixed data
     python -m torch.distributed.launch --nproc_per_node=2 --use_env main.py --exp_name=backbone-L --batch_size=100 --num_workers=8 --lr=2e-4 --data_mode=h36m --model_type=backbone --num_epochs=50 --hrnet_type=w48  
 
-    # 2. Train SMPLer on mixed data
+    # 2. Train SMPLer-L on mixed data
     python -m torch.distributed.launch --nproc_per_node=2 --use_env main.py --exp_name=smpler-L --batch_size=100 --num_workers=8 --lr=2e-4 --data_mode=h36m --model_type=smpler --num_epochs=100 --hrnet_type=w48 --load_checkpoint=logs/backbone-L/checkpoints/epoch_049.pt
 
-    # 3. Finetune SMPLer on 3DPW
+    # 3. Finetune SMPLer-L on 3DPW
     python -m torch.distributed.launch --nproc_per_node=1 --use_env main.py --exp_name=smpler-L_3dpw --batch_size=32 --num_workers=8 --lr=1e-4 --data_mode=3dpw --model_type=smpler --num_epochs=1 --hrnet_type=w48 --load_checkpoint=logs/smpler-L/checkpoints/epoch_***.pt --summary_steps=100
     ```
 
