@@ -7,7 +7,7 @@
     <p style="font-size:18px; "><em><strong><a href="url">arXiv</a> &nbsp;&nbsp;&nbsp; <a href="http://en.xjtu.edu.cn/">Xi'an Jiaotong University</a></strong></em></p>
 </div>
 
-[![Watch the video](assets/thumbnail2.jpg)](https://youtu.be/lXSiaMPnZVE)
+[![Watch the video](assets/thumbnail.jpg)](https://www.youtube.com/watch?v=vPetpEYjWNM)
 
 ## Abstact
 Existing Transformers for monocular 3D human shape and pose estimation typically have a quadratic computation and memory complexity with respect to the feature length, which hinders the exploitation of fine-grained information in high-resolution features that is beneficial for accurate reconstruction. In this work, we propose an **SMPL**-based Transform**er** framework (**SMPLer**) to address this issue. SMPLer incorporates two key ingredients: a decoupled attention operation and an SMPL-based target representation, which allow effective utilization of high-resolution features in the Transformer. In addition, based on these two designs, we also introduce several novel modules including a multi-scale attention and a joint-aware attention to further boost the reconstruction performance. Extensive experiments demonstrate the effectiveness of SMPLer against existing 3D human shape and pose estimation methods both quantitatively and qualitatively. Notably, the proposed algorithm achieves an MPJPE of 45.2mm on the Human3.6M dataset, improving upon Mesh Graphormer by more than 10% with fewer than one-third of the parameters.
