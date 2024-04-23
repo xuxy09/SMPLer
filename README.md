@@ -138,7 +138,7 @@ Alternative way: wget (usually slower and less stable, but no dependency on azco
     python -m torch.distributed.launch --nproc_per_node=2 --use_env main.py --exp_name=smpler --batch_size=100 --num_workers=8 --lr=2e-4 --data_mode=h36m --model_type=smpler --num_epochs=100 --hrnet_type=w32 --load_checkpoint=logs/backbone/checkpoints/epoch_049.pt
 
     # 3. Finetune SMPLer on 3DPW
-    python -m torch.distributed.launch --nproc_per_node=1 --use_env main.py --exp_name=smpler_3dpw --batch_size=32 --num_workers=8 --lr=1e-4 --data_mode=3dpw --model_type=smpler --num_epochs=1 --hrnet_type=w32 --load_checkpoint=logs/smpler/checkpoints/epoch_***.pt --summary_steps=100
+    python -m torch.distributed.launch --nproc_per_node=1 --use_env main.py --exp_name=smpler_3dpw --batch_size=32 --num_workers=8 --lr=1e-4 --data_mode=3dpw --model_type=smpler --num_epochs=2 --hrnet_type=w32 --load_checkpoint=logs/smpler/checkpoints/epoch_***.pt --summary_steps=100
     ```
 
 - For SMPLer-L:
@@ -150,7 +150,7 @@ Alternative way: wget (usually slower and less stable, but no dependency on azco
     python -m torch.distributed.launch --nproc_per_node=2 --use_env main.py --exp_name=smpler-L --batch_size=100 --num_workers=8 --lr=2e-4 --data_mode=h36m --model_type=smpler --num_epochs=100 --hrnet_type=w48 --load_checkpoint=logs/backbone-L/checkpoints/epoch_049.pt
 
     # 3. Finetune SMPLer-L on 3DPW
-    python -m torch.distributed.launch --nproc_per_node=1 --use_env main.py --exp_name=smpler-L_3dpw --batch_size=32 --num_workers=8 --lr=1e-4 --data_mode=3dpw --model_type=smpler --num_epochs=1 --hrnet_type=w48 --load_checkpoint=logs/smpler-L/checkpoints/epoch_***.pt --summary_steps=100
+    python -m torch.distributed.launch --nproc_per_node=1 --use_env main.py --exp_name=smpler-L_3dpw --batch_size=32 --num_workers=8 --lr=1e-4 --data_mode=3dpw --model_type=smpler --num_epochs=2 --hrnet_type=w48 --load_checkpoint=logs/smpler-L/checkpoints/epoch_***.pt --summary_steps=100
     ```
 
 
