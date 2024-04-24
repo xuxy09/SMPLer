@@ -4,7 +4,7 @@
     <br>
     <h1>&#x1F525; SMPLer: Taming Transformers for Monocular 3D Human Shape and Pose Estimation &#x1F525;</h1>
     <p style="font-size:18px; "><a href="https://xuxy09.github.io/">Xiangyu Xu</a>,&nbsp;&nbsp;&nbsp; <a href="https://scholar.google.com/citations?user=nANxp5wAAAAJ&hl=en">Lijuan Liu</a>,&nbsp;&nbsp;&nbsp; <a href="https://yanshuicheng.info/">Shuicheng Yan</a></p>
-    <p style="font-size:18px; "><em><strong><a href="url">arXiv</a> &nbsp;&nbsp;&nbsp; <a href="http://en.xjtu.edu.cn/">Xi'an Jiaotong University</a></strong></em></p>
+    <p style="font-size:18px; "><em><strong><a href="https://arxiv.org/abs/2404.15276">arXiv</a> &nbsp;&nbsp;&nbsp; <a href="http://en.xjtu.edu.cn/">Xi'an Jiaotong University</a></strong></em></p>
 </div>
 
 [![Watch the video](assets/thumbnail.jpg)](https://www.youtube.com/watch?v=vPetpEYjWNM)
