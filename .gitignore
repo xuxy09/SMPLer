@@ -1,2 +1,4 @@
-meta_data
-pretrained
+meta_data/*
+pretrained/*
+
+__pycache__
