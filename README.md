@@ -70,9 +70,9 @@ Existing Transformers for monocular 3D human shape and pose estimation typically
     ```
 
 ## 2. How to Run
-- Download [meta data](https://xjtueducn-my.sharepoint.com/:u:/g/personal/xiangyu_xu_xjtu_edu_cn/ER5jWWesn0ZHjZQNWkixOZABifez3WFVlrcSQbv7vhduCQ?e=yCYrJW) and extract it into "PATH_to_SMPLer/meta_data"
+- Download [meta data](https://share.weiyun.com/8zWRIAN1) and extract it into "PATH_to_SMPLer/meta_data"
 
-- Download [pretrained models](https://xjtueducn-my.sharepoint.com/:u:/g/personal/xiangyu_xu_xjtu_edu_cn/EUpZDGdn585DjiQZ8Eg89nYBZRKnyjbint-9fYD0_ECz3Q?e=6NRgb5) and extract it into "PATH_to_SMPLer/pretrained"
+- Download [pretrained models](https://share.weiyun.com/o65G2zHE) and extract it into "PATH_to_SMPLer/pretrained"
 
 - Run demo
     ```bash
