@@ -1,0 +1,4 @@
+meta_data/*
+pretrained/*
+
+__pycache__
