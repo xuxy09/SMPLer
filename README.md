@@ -81,9 +81,9 @@ Existing Transformers for monocular 3D human shape and pose estimation typically
 
 ## 3. Train and Test
 ### 3.1 Prepare Datasets
-There are two ways to download the datasets: azcopy and wget. 
+There are three ways to download the datasets: azcopy and wget. 
 
-**Recommended way: azcopy (faster)**
+**1. Recommended: azcopy** (faster)
 - Download azcopy from [here](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10#download-azcopy)
 
 - Download datasets with azcopy:
@@ -99,13 +99,22 @@ There are two ways to download the datasets: azcopy and wget.
     ln -s PATH_to_STORE_DATASET ./datasets
     ```
 
-Alternative way: wget (usually slower and less stable, but no dependency on azcopy)
+**2. wget** (usually slower and less stable, but no dependency on azcopy)
 -  Download datasets with wget:
     ```bash
     cd PATH_to_STORE_DATASET
     bash PATH_to_SMPLer/scripts/download_datasets_wget.sh
     ```
 
+**3. Tencent Weiyun**
+- Download the data at: [link](https://share.weiyun.com/bszh1fGH)
+- Combine splits and unzip:
+    ```bash
+    cat human3.6m_part_* > human3.6m.zip
+    cat muco_part_* > muco.zip
+    # unzip all datasets
+    for f in *.zip; do unzip "$f"; done
+    ```
 
 
 ### 3.2 Test
